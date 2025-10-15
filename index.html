@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DesignsDynamix - Graphic Design Studio</title>
+    <link rel="icon" type="image/x-icon" href="https://static.photos/creative/200x200/42">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .gradient-text {
+            background: linear-gradient(90deg, #FF4D4D 0%, #F9CB28 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .tooltip:hover .tooltip-text {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-gray-50" id="vanta-bg">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white bg-opacity-90 backdrop-blur-md z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <span class="text-2xl font-bold gradient-text">DesignsDynamix</span>
+                    </div>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="#home" class="text-gray-900 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium">Home</a>
+                        <a href="#services" class="text-gray-900 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium">Services</a>
+                        <a href="#portfolio" class="text-gray-900 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium">Portfolio</a>
+                        <a href="#about" class="text-gray-900 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium">About</a>
+                        <a href="#contact" class="bg-purple-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-purple-700 transition-colors">Contact Us</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button class="text-gray-900 focus:outline-none" id="menu-toggle">
+                        <i data-feather="menu"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div class="md:hidden hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="text-gray-900 hover:text-purple-600 block px-3 py-2 rounded-md text-base font-medium">Home</a>
+                <a href="#services" class="text-gray-900 hover:text-purple-600 block px-3 py-2 rounded-md text-base font-medium">Services</a>
+                <a href="#portfolio" class="text-gray-900 hover:text-purple-600 block px-3 py-2 rounded-md text-base font-medium">Portfolio</a>
+                <a href="#about" class="text-gray-900 hover:text-purple-600 block px-3 py-2 rounded-md text-base font-medium">About</a>
+                <a href="#contact" class="bg-purple-600 text-white block px-4 py-2 rounded-md text-base font-medium hover:bg-purple-700 transition-colors">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <h1 class="text-4xl md:text-6xl font-bold mb-6">Make Your Business <span class="gradient-text">Stand Out</span></h1>
+                <p class="text-lg text-gray-600 mb-8">We create eye-catching graphic designs that elevate your brand at prices that won't break your budget.</p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="#contact" class="bg-purple-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-purple-700 transition-colors">Get Started</a>
+                    <a href="#portfolio" class="border border-purple-600 text-purple-600 px-6 py-3 rounded-lg font-medium hover:bg-purple-50 transition-colors">View Portfolio</a>
+                </div>
+            </div>
+            <div class="relative">
+                <div class="absolute -top-10 -right-10 w-64 h-64 bg-purple-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>
+                <div class="absolute -bottom-10 -left-10 w-64 h-64 bg-yellow-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000"></div>
+                <div class="absolute top-0 left-20 w-64 h-64 bg-pink-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000"></div>
+                <div class="relative">
+                    <img src="https://cdn.dribbble.com/userupload/25089687/file/original-a89556cd981a20b91dedbc7c76ab0087.jpg" alt="Creative Designs" class="rounded-2xl shadow-2xl w-full h-auto">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tools Section -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-2xl font-bold text-gray-900">Crafting With Industry-Standard Tools</h2>
+                <p class="mt-4 text-gray-600">We use the best design software to bring your vision to life</p>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="flex flex-col items-center p-6 rounded-xl hover:bg-gray-50 transition-colors">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Adobe_Photoshop_CC_icon.svg/1200px-Adobe_Photoshop_CC_icon.svg.png" alt="Photoshop" class="h-16 w-16 object-contain mb-4">
+                    <h3 class="font-medium text-gray-900">Adobe Photoshop</h3>
+                </div>
+                <div class="flex flex-col items-center p-6 rounded-xl hover:bg-gray-50 transition-colors">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Adobe_Illustrator_CC_icon.svg/1200px-Adobe_Illustrator_CC_icon.svg.png" alt="Illustrator" class="h-16 w-16 object-contain mb-4">
+                    <h3 class="font-medium text-gray-900">Adobe Illustrator</h3>
+                </div>
+                <div class="flex flex-col items-center p-6 rounded-xl hover:bg-gray-50 transition-colors">
+                    <img src="https://img.icons8.com/color/200/coreldraw.png" alt="CorelDRAW" class="h-16 w-16 object-contain mb-4">
+                    <h3 class="font-medium text-gray-900">CorelDRAW</h3>
+                </div>
+                <div class="flex flex-col items-center p-6 rounded-xl hover:bg-gray-50 transition-colors">
+                    <img src="https://cdn-1.webcatalog.io/catalog/canva-cn/canva-cn-icon-unplated.png?v=1757294759328" alt="Canva" class="h-16 w-16 object-contain mb-4">
+                    <h3 class="font-medium text-gray-900">Canva</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900">Our Graphic Design Services</h2>
+                <p class="mt-4 text-gray-600">We create designs that capture attention and communicate your message effectively</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+                    <div class="w-16 h-16 bg-purple-100 rounded-xl flex items-center justify-center mb-6">
+                        <i data-feather="image" class="text-purple-600 w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-900">Logo Design</h3>
+                    <p class="text-gray-600">Unique, memorable logos that represent your brand identity perfectly.</p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+                    <div class="w-16 h-16 bg-yellow-100 rounded-xl flex items-center justify-center mb-6">
+                        <i data-feather="type" class="text-yellow-600 w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-900">Banners & Posters</h3>
+                    <p class="text-gray-600">Eye-catching designs for events, promotions, and announcements.</p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+                    <div class="w-16 h-16 bg-pink-100 rounded-xl flex items-center justify-center mb-6">
+                        <i data-feather="share-2" class="text-pink-600 w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-900">Social Media Posts</h3>
+                    <p class="text-gray-600">Engaging content designed to stand out in social media feeds.</p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+                    <div class="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mb-6">
+                        <i data-feather="box" class="text-blue-600 w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-900">Branding Packages</h3>
+                    <p class="text-gray-600">Complete visual identity systems including logos, colors, and typography.</p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+                    <div class="w-16 h-16 bg-green-100 rounded-xl flex items-center justify-center mb-6">
+                        <i data-feather="book-open" class="text-green-600 w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-900">Brochures & Flyers</h3>
+                    <p class="text-gray-600">Professional print materials that inform and attract customers.</p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+                    <div class="w-16 h-16 bg-red-100 rounded-xl flex items-center justify-center mb-6">
+                        <i data-feather="plus-circle" class="text-red-600 w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-900">Custom Designs</h3>
+                    <p class="text-gray-600">Tailored designs for any specific need you might have.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900">Our Creative Portfolio</h2>
+                <p class="mt-4 text-gray-600">Browse through our latest design projects</p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="group relative overflow-hidden rounded-xl shadow-md">
+                    <img src="https://static.photos/creative/640x360/1" alt="Logo Design" class="w-full h-64 object-cover transition-transform group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6 opacity-0 group-hover:opacity-100 transition-opacity">
+                        <div>
+                            <h3 class="text-white font-bold text-xl mb-1">Logo Design</h3>
+                            <p class="text-gray-200">For a local coffee shop chain</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="group relative overflow-hidden rounded-xl shadow-md">
+                    <img src="https://static.photos/creative/640x360/2" alt="Social Media Posts" class="w-full h-64 object-cover transition-transform group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6 opacity-0 group-hover:opacity-100 transition-opacity">
+                        <div>
+                            <h3 class="text-white font-bold text-xl mb-1">Social Media Campaign</h3>
+                            <p class="text-gray-200">For a fitness influencer</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="group relative overflow-hidden rounded-xl shadow-md">
+                    <img src="https://static.photos/creative/640x360/3" alt="Poster Design" class="w-full h-64 object-cover transition-transform group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6 opacity-0 group-hover:opacity-100 transition-opacity">
+                        <div>
+                            <h3 class="text-white font-bold text-xl mb-1">Event Poster</h3>
+                            <p class="text-gray-200">For a music festival</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="group relative overflow-hidden rounded-xl shadow-md">
+                    <img src="https://static.photos/creative/640x360/4" alt="Branding" class="w-full h-64 object-cover transition-transform group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6 opacity-0 group-hover:opacity-100 transition-opacity">
+                        <div>
+                            <h3 class="text-white font-bold text-xl mb-1">Branding Package</h3>
+                            <p class="text-gray-200">For a startup company</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="group relative overflow-hidden rounded-xl shadow-md">
+                    <img src="https://static.photos/creative/640x360/5" alt="Brochure" class="w-full h-64 object-cover transition-transform group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6 opacity-0 group-hover:opacity-100 transition-opacity">
+                        <div>
+                            <h3 class="text-white font-bold text-xl mb-1">Product Brochure</h3>
+                            <p class="text-gray-200">For a skincare brand</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="group relative overflow-hidden rounded-xl shadow-md">
+                    <img src="https://static.photos/creative/640x360/6" alt="Custom Design" class="w-full h-64 object-cover transition-transform group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6 opacity-0 group-hover:opacity-100 transition-opacity">
+                        <div>
+                            <h3 class="text-white font-bold text-xl mb-1">Packaging Design</h3>
+                            <p class="text-gray-200">For a gourmet food product</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-12 text-center">
+                <a href="#contact" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-purple-600 hover:bg-purple-700">
+                    Ready to Start Your Project?
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900">Happy Clients</h2>
+                <p class="mt-4 text-gray-600">Don't just take our word for it - hear what our clients say</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <div class="flex-shrink-0">
+                            <img class="h-10 w-10 rounded-full" src="https://static.photos/people/200x200/1" alt="Client">
+                        </div>
+                        <div class="ml-3">
+                            <p class="text-sm font-medium text-gray-900">Sarah Johnson</p>
+                            <div class="flex space-x-1 text-yellow-400">
+                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"The logo DesignsDynamix created for my boutique perfectly captured the aesthetic I was going for. They were patient with revisions and delivered beyond expectations."</p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <div class="flex-shrink-0">
+                            <img class="h-10 w-10 rounded-full" src="https://static.photos/people/200x200/2" alt="Client">
+                        </div>
+                        <div class="ml-3">
+                            <p class="text-sm font-medium text-gray-900">Michael Chen</p>
+                            <div class="flex space-x-1 text-yellow-400">
+                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"Our social media engagement skyrocketed after using DesignsDynamix for our content creation. Their designs are modern, fresh, and perfectly on-brand."</p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <div class="flex-shrink-0">
+                            <img class="h-10 w-10 rounded-full" src="https://static.photos/people/200x200/3" alt="Client">
+                        </div>
+                        <div class="ml-3">
+                            <p class="text-sm font-medium text-gray-900">Priya Patel</p>
+                            <div class="flex space-x-1 text-yellow-400">
+                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"The branding package we received was comprehensive and elevated our startup's professional image. The team understood our vision immediately."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl font-bold text-gray-900 mb-6">About DesignsDynamix</h2>
+                    <p class="text-gray-600 mb-4">We're a passionate team of graphic designers dedicated to helping businesses stand out through exceptional visual design. With years of experience across various industries, we understand what makes a design effective.</p>
+                    <p class="text-gray-600 mb-4">Our approach combines creativity with strategy - we don't just make things look pretty, we create designs that communicate your brand's message clearly and memorably.</p>
+                    <p class="text-gray-600 mb-6">What sets us apart is our commitment to affordability without compromising quality. We believe great design should be accessible to businesses of all sizes.</p>
+                    <div class="flex flex-wrap gap-4">
+                        <div class="flex items-center">
+                            <i data-feather="award" class="text-purple-600 mr-2"></i>
+                            <span class="text-sm font-medium">Professional Quality</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i data-feather="dollar-sign" class="text-purple-600 mr-2"></i>
+                            <span class="text-sm font-medium">Budget-Friendly</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i data-feather="clock" class="text-purple-600 mr-2"></i>
+                            <span class="text-sm font-medium">Quick Turnaround</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="absolute -top-6 -left-6 w-full h-full border-2 border-purple-200 rounded-xl"></div>
+                    <div class="relative">
+                        <img src="https://static.photos/workspace/640x360/7" alt="Design Team" class="rounded-xl shadow-md w-full">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <!-- Contact Section -->
+<section id="contact" class="py-16 bg-purple-600 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold mb-4">Let's Create something amazing</h2>
+            <p class="text-purple-100 max-w-2xl mx-auto">Get in touch with us today to discuss your design needs. We're excited to help bring your vision to life!</p>
+        </div>
+        <div class="grid md:grid-cols-2 gap-12">
+            <div>
+                <form id="contactForm" class="space-y-6">
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-purple-100">Your Name</label>
+                        <input type="text" id="name" name="name" class="mt-1 block w-full px-4 py-3 rounded-md border-transparent bg-purple-700 text-white placeholder-purple-300 focus:border-purple-300 focus:ring-purple-300">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-purple-100">Email Address</label>
+                        <input type="email" id="email" name="email" class="mt-1 block w-full px-4 py-3 rounded-md border-transparent bg-purple-700 text-white placeholder-purple-300 focus:border-purple-300 focus:ring-purple-300">
+                    </div>
+                    <div>
+                        <label for="service" class="block text-sm font-medium text-purple-100">Service Needed</label>
+                        <select id="service" name="service" class="mt-1 block w-full px-4 py-3 rounded-md border-transparent bg-purple-700 text-white focus:border-purple-300 focus:ring-purple-300">
+                            <option>Logo Design</option>
+                            <option>Banners & Posters</option>
+                            <option>Social Media Posts</option>
+                            <option>Branding Package</option>
+                            <option>Brochures & Flyers</option>
+                            <option>Custom Design</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-purple-100">Project Details</label>
+                        <textarea id="message" name="message" rows="4" class="mt-1 block w-full px-4 py-3 rounded-md border-transparent bg-purple-700 text-white placeholder-purple-300 focus:border-purple-300 focus:ring-purple-300"></textarea>
+                    </div>
+                    <div>
+                        <button type="submit" class="w-full flex justify-center items-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-purple-600 bg-white hover:bg-purple-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-300">
+                            Send Message
+                            <i data-feather="send" class="ml-2"></i>
+                        </button>
+                    </div>
+                </form>
+            </div>
+            <div class="space-y-8">
+                <div class="flex items-start">
+                    <div class="flex-shrink-0 bg-purple-500 rounded-lg p-3">
+                        <i data-feather="mail" class="w-6 h-6"></i>
+                    </div>
+                    <div class="ml-4">
+                        <h3 class="text-lg font-medium">Email Us</h3>
+                        <p class="text-purple-100">designsdynamix@gmail.com</p>
+                    </div>
+                </div>
+                <div class="flex items-start">
+                    <div class="flex-shrink-0 bg-purple-500 rounded-lg p-3">
+                        <i data-feather="phone" class="w-6 h-6"></i>
+                    </div>
+                    <div class="ml-4">
+                        <h3 class="text-lg font-medium">Call Us</h3>
+                        <p class="text-purple-100">+91 9930450060</p>
+                    </div>
+                </div>
+                <div class="flex items-start">
+                    <div class="flex-shrink-0 bg-purple-500 rounded-lg p-3">
+                        <i data-feather="instagram" class="w-6 h-6"></i>
+                    </div>
+                    <div class="ml-4">
+                        <h3 class="text-lg font-medium">Follow Us</h3>
+                        <p class="text-purple-100">instagram.com/designsdynamix</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl p-6 text-purple-900">
+                    <h3 class="text-lg font-bold mb-3">Why Choose Us?</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i data-feather="check" class="text-green-500 mr-2 mt-0.5"></i>
+                            <span>Quick turnaround times</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="check" class="text-green-500 mr-2 mt-0.5"></i>
+                            <span>Unlimited revisions until you're satisfied</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="check" class="text-green-500 mr-2 mt-0.5"></i>
+                            <span>Multiple file formats delivered</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="check" class="text-green-500 mr-2 mt-0.5"></i>
+                            <span>Professional and friendly service</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-gray-900 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="grid md:grid-cols-4 gap-8">
+            <div>
+                <h3 class="text-xl font-bold gradient-text mb-4">DesignsDynamix</h3>
+                <p class="text-gray-400">Creating designs that make your business stand out from the competition.</p>
+                <div class="flex space-x-4 mt-6">
+                    <a href="#" class="text-gray-400 hover:text-white">
+                        <i data-feather="instagram"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white">
+                        <i data-feather="facebook"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white">
+                        <i data-feather="twitter"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white">
+                        <i data-feather="linkedin"></i>
+                    </a>
+                </div>
+            </div>
+            <div>
+                <h3 class="text-sm font-semibold text-gray-300 uppercase tracking-wider mb-4">Services</h3>
+                <ul class="space-y-3">
+                    <li><a href="#" class="text-gray-400 hover:text-white">Logo Design</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white">Banners & Posters</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white">Social Media Posts</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white">Branding Packages</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-sm font-semibold text-gray-300 uppercase tracking-wider mb-4">Company</h3>
+                <ul class="space-y-3">
+                    <li><a href="#about" class="text-gray-400 hover:text-white">About Us</a></li>
+                    <li><a href="#portfolio" class="text-gray-400 hover:text-white">Portfolio</a></li>
+                    <li><a href="#contact" class="text-gray-400 hover:text-white">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-sm font-semibold text-gray-300 uppercase tracking-wider mb-4">Legal</h3>
+                <ul class="space-y-3">
+                    <li><a href="privacy.html" class="text-gray-400 hover:text-white">Privacy Policy</a></li>
+                    <li><a href="terms.html" class="text-gray-400 hover:text-white">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="mt-12 pt-8 border-t border-gray-800">
+            <p class="text-gray-400 text-sm text-center">&copy; 2025 DesignsDynamix. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+<script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+<script>
+    // Initialize Vanta.js background
+    VANTA.NET({
+        el: "#vanta-bg",
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        minHeight: 200.00,
+        minWidth: 200.00,
+        scale: 1.00,
+        scaleMobile: 1.00,
+        color: 0x7c3aed,
+        backgroundColor: 0xf9fafb,
+        points: 10.00,
+        maxDistance: 24.00,
+        spacing: 17.00
+    });
+
+    // Mobile menu toggle
+    document.getElementById('menu-toggle').addEventListener('click', function() {
+        const menu = document.getElementById('mobile-menu');
+        menu.classList.toggle('hidden');
+    });
+
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+
+    // Initialize feather icons
+    feather.replace();
+
+    // ✅ Telegram Bot Send Message Script with persistent 60s cooldown
+    const BOT_TOKEN = "8343239675:AAEZOtUPz_bdlv97jx-BI8XT6Iv3gjMxGZs";
+    const CHAT_ID = "1561851616";
+
+    const contactForm = document.getElementById('contactForm');
+    const submitBtn = contactForm.querySelector('button[type="submit"]');
+    const messageBox = document.getElementById('message');
+
+    // Max character limit & counter
+    const maxChars = 5000;
+    const counter = document.createElement('div');
+    counter.className = "text-sm text-purple-200 absolute bottom-2 right-2";
+    counter.textContent = `0/${maxChars}`;
+    messageBox.parentElement.style.position = "relative";
+    messageBox.parentElement.appendChild(counter);
+
+    messageBox.addEventListener('input', () => {
+        const length = messageBox.value.length;
+        if(length > maxChars) {
+            messageBox.value = messageBox.value.substring(0, maxChars);
+        }
+        counter.textContent = `${messageBox.value.length}/${maxChars}`;
+    });
+
+    // Persistent cooldown
+    const cooldownKey = "contactCooldown";
+    let remainingTime = 0;
+
+    function startCooldown(seconds) {
+        submitBtn.disabled = true;
+        submitBtn.classList.add('opacity-50', 'cursor-not-allowed');
+
+        remainingTime = seconds;
+        localStorage.setItem(cooldownKey, Date.now() + remainingTime * 1000);
+
+        const timer = setInterval(() => {
+            const now = Date.now();
+            const endTime = parseInt(localStorage.getItem(cooldownKey), 10);
+            remainingTime = Math.ceil((endTime - now) / 1000);
+
+            if (remainingTime <= 0) {
+                clearInterval(timer);
+                submitBtn.disabled = false;
+                submitBtn.textContent = "Send Message";
+                submitBtn.classList.remove('opacity-50', 'cursor-not-allowed');
+                localStorage.removeItem(cooldownKey);
+            } else {
+                submitBtn.textContent = `Wait ${remainingTime}s`;
+            }
+        }, 1000);
+    }
+
+    // Check cooldown on page load
+    const savedTime = localStorage.getItem(cooldownKey);
+    if(savedTime) {
+        const now = Date.now();
+        const diff = Math.ceil((savedTime - now) / 1000);
+        if(diff > 0) {
+            startCooldown(diff);
+        } else {
+            localStorage.removeItem(cooldownKey);
+        }
+    }
+
+    // Form submission
+    contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        const name = document.getElementById('name').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const service = document.getElementById('service').value;
+        const message = messageBox.value.trim();
+
+        if(!name || !email || !message) {
+            alert("⚠️ Please fill in all required fields.");
+            return;
+        }
+
+        const fullMessage = `📢 New Contact Form Submission\n\n👤 Name: ${name}\n📧 Email: ${email}\n🛠 Service: ${service}\n📝 Message: ${message}`;
+
+        fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+                chat_id: CHAT_ID,
+                text: fullMessage
+            })
+        })
+        .then(res => res.json())
+        .then(data => {
+            if (data.ok) {
+                alert("✅ Message Sent!");
+                contactForm.reset();
+                counter.textContent = `0/${maxChars}`;
+                startCooldown(60);
+            } else {
+                alert("❌ Failed to send message. Try again.");
+            }
+        })
+        .catch(err => {
+            console.error(err);
+            alert("⚠️ Error sending message.");
+        });
+    });
+</script>
+
+
+
